@@ -10,11 +10,11 @@ export default function Navigation() {
   const navItems = [
     { href: '/', label: 'Beranda' },
     { href: '/about', label: 'Tentang Kami' },
-    // { href: "/programs", label: "Program" },
     { href: '/articles', label: 'Artikel' },
     { href: '/merch', label: 'Merchandise' },
-    // { href: '/events', label: 'Acara' },
     { href: '/contact', label: 'Kontak' }
+    // { href: "/programs", label: "Program" },
+    // { href: '/events', label: 'Acara' },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-expanded font-black text-xl text-brand-blue">
-            FORUM OSIS
+            FON XII
           </Link>
 
           {/* Desktop Navigation */}
