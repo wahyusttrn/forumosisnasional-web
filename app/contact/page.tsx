@@ -59,15 +59,15 @@ export default function ContactPage() {
       href: 'https://forumosisnasional.com',
       color: 'bg-brand-blue',
       textColor: 'text-white'
-    },
-    {
-      title: 'Discord Server',
-      description: 'Komunitas OSIS Indonesia',
-      icon: Users,
-      href: 'https://discord.gg/forumosis',
-      color: 'bg-indigo-600',
-      textColor: 'text-white'
     }
+    // {
+    //   title: 'Discord Server',
+    //   description: 'Komunitas OSIS Indonesia',
+    //   icon: Users,
+    //   href: 'https://discord.gg/forumosis',
+    //   color: 'bg-indigo-600',
+    //   textColor: 'text-white'
+    // }
   ];
 
   return (

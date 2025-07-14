@@ -1,8 +1,8 @@
-import Navigation from "@/components/navigation"
-import HeroSection from "@/components/hero-section"
-import AboutSection from "@/components/about-section"
-import MerchSection from "@/components/merch-section"
-import Footer from "@/components/footer"
+import Navigation from '@/components/navigation';
+import HeroSection from '@/components/hero-section';
+import AboutSection from '@/components/about-section';
+import MerchSection from '@/components/merch-section';
+import Footer from '@/components/footer';
 
 export default function HomePage() {
   return (
@@ -10,8 +10,8 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <MerchSection />
+      {/* <MerchSection /> */}
       <Footer />
     </main>
-  )
+  );
 }
