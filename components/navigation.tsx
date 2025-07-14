@@ -11,10 +11,10 @@ export default function Navigation() {
     { href: '/', label: 'Beranda' },
     { href: '/about', label: 'Tentang Kami' },
     { href: '/articles', label: 'Artikel' },
-    { href: '/merch', label: 'Merchandise' },
-    { href: '/contact', label: 'Kontak' }
+    // { href: '/merch', label: 'Merchandise' },
     // { href: "/programs", label: "Program" },
     // { href: '/events', label: 'Acara' },
+    { href: '/contact', label: 'Kontak' }
   ];
 
   return (

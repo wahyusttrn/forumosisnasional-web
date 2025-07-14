@@ -17,8 +17,8 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-expanded font-black text-2xl mb-4">FORUM OSIS NASIONAL</h3>
             <p className="text-white/80 mb-6 leading-relaxed">
-              Membangun generasi pemimpin masa depan melalui organisasi siswa yang kuat dan berdampak. Bersama selama 12
-              tahun memajukan pendidikan Indonesia.
+              Sekretariat Pusat Forum OSIS Nasional, Jl. Balai Rakyat No 96F, Kel. Jagakarsa, Kec. Jagakarsa, Kota
+              Jakarta Selatan, Daerah Khusus Jakarta, 12620.
             </p>
             <div className="flex gap-4">
               <a
@@ -85,15 +85,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-white/60" />
-                <span className="text-white/80">info@forumosis.id</span>
+                <span className="text-white/80">sekretariat.fon@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-white/60" />
                 <span className="text-white/80">+62 21 1234 5678</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin size={16} className="text-white/60 mt-1" />
-                <span className="text-white/80">Jakarta, Indonesia</span>
               </div>
             </div>
           </div>

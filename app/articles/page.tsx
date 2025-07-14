@@ -1,89 +1,89 @@
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import { Calendar, User, ArrowRight, Clock } from "lucide-react"
-import Link from "next/link"
+import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
+import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ArticlesPage() {
   const featuredArticle = {
     id: 1,
-    title: "Membangun Kepemimpinan Siswa di Era Digital",
+    title: 'Membangun Kepemimpinan Siswa di Era Digital',
     excerpt:
-      "Bagaimana Forum OSIS Nasional mengadaptasi program kepemimpinan untuk menghadapi tantangan era digital dan mempersiapkan siswa menjadi pemimpin masa depan.",
-    author: "Tim Editorial Forum OSIS",
-    date: "15 Desember 2024",
-    readTime: "8 menit",
-    image: "/placeholder.svg?height=400&width=800",
-    category: "Kepemimpinan",
-  }
+      'Bagaimana Forum OSIS Nasional mengadaptasi program kepemimpinan untuk menghadapi tantangan era digital dan mempersiapkan siswa menjadi pemimpin masa depan.',
+    author: 'Tim Editorial Forum OSIS',
+    date: '15 Desember 2024',
+    readTime: '8 menit',
+    image: '/placeholder.svg?height=400&width=800',
+    category: 'Kepemimpinan'
+  };
 
   const articles = [
     {
       id: 2,
-      title: "Inovasi Program OSIS: Dari Tradisional ke Digital",
+      title: 'Inovasi Program OSIS: Dari Tradisional ke Digital',
       excerpt:
-        "Transformasi program OSIS tradisional menjadi format digital yang lebih engaging dan efektif untuk siswa modern.",
-      author: "Ahmad Rizki",
-      date: "12 Desember 2024",
-      readTime: "6 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Inovasi",
+        'Transformasi program OSIS tradisional menjadi format digital yang lebih engaging dan efektif untuk siswa modern.',
+      author: 'Ahmad Rizki',
+      date: '12 Desember 2024',
+      readTime: '6 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Inovasi'
     },
     {
       id: 3,
-      title: "Kolaborasi Antar Sekolah: Kunci Sukses OSIS Nasional",
+      title: 'Kolaborasi Antar Sekolah: Kunci Sukses OSIS Nasional',
       excerpt:
-        "Pentingnya membangun jaringan dan kolaborasi yang kuat antar OSIS sekolah untuk mencapai tujuan bersama.",
-      author: "Sari Indah",
-      date: "10 Desember 2024",
-      readTime: "5 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Kolaborasi",
+        'Pentingnya membangun jaringan dan kolaborasi yang kuat antar OSIS sekolah untuk mencapai tujuan bersama.',
+      author: 'Sari Indah',
+      date: '10 Desember 2024',
+      readTime: '5 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Kolaborasi'
     },
     {
       id: 4,
-      title: "Peran OSIS dalam Pengembangan Karakter Siswa",
+      title: 'Peran OSIS dalam Pengembangan Karakter Siswa',
       excerpt:
-        "Bagaimana kegiatan OSIS dapat menjadi wadah efektif untuk mengembangkan karakter dan soft skills siswa.",
-      author: "Budi Santoso",
-      date: "8 Desember 2024",
-      readTime: "7 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Pendidikan",
+        'Bagaimana kegiatan OSIS dapat menjadi wadah efektif untuk mengembangkan karakter dan soft skills siswa.',
+      author: 'Budi Santoso',
+      date: '8 Desember 2024',
+      readTime: '7 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Pendidikan'
     },
     {
       id: 5,
-      title: "Strategi Komunikasi Efektif untuk Organisasi Siswa",
+      title: 'Strategi Komunikasi Efektif untuk Organisasi Siswa',
       excerpt:
-        "Tips dan strategi komunikasi yang dapat diterapkan oleh pengurus OSIS untuk meningkatkan engagement dengan siswa.",
-      author: "Maya Putri",
-      date: "5 Desember 2024",
-      readTime: "4 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Komunikasi",
+        'Tips dan strategi komunikasi yang dapat diterapkan oleh pengurus OSIS untuk meningkatkan engagement dengan siswa.',
+      author: 'Maya Putri',
+      date: '5 Desember 2024',
+      readTime: '4 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Komunikasi'
     },
     {
       id: 6,
-      title: "Mengelola Event Sekolah: Panduan Lengkap untuk OSIS",
-      excerpt: "Panduan step-by-step untuk merencanakan dan mengelola event sekolah yang sukses dan berkesan.",
-      author: "Doni Pratama",
-      date: "3 Desember 2024",
-      readTime: "9 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Event Management",
+      title: 'Mengelola Event Sekolah: Panduan Lengkap untuk OSIS',
+      excerpt: 'Panduan step-by-step untuk merencanakan dan mengelola event sekolah yang sukses dan berkesan.',
+      author: 'Doni Pratama',
+      date: '3 Desember 2024',
+      readTime: '9 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Event Management'
     },
     {
       id: 7,
-      title: "Fundraising untuk Kegiatan OSIS: Tips dan Trik",
-      excerpt: "Strategi kreatif dan efektif untuk menggalang dana bagi kegiatan OSIS tanpa memberatkan siswa.",
-      author: "Lisa Anggraini",
-      date: "1 Desember 2024",
-      readTime: "6 menit",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "Fundraising",
-    },
-  ]
+      title: 'Fundraising untuk Kegiatan OSIS: Tips dan Trik',
+      excerpt: 'Strategi kreatif dan efektif untuk menggalang dana bagi kegiatan OSIS tanpa memberatkan siswa.',
+      author: 'Lisa Anggraini',
+      date: '1 Desember 2024',
+      readTime: '6 menit',
+      image: '/placeholder.svg?height=300&width=400',
+      category: 'Fundraising'
+    }
+  ];
 
-  const categories = ["Semua", "Kepemimpinan", "Inovasi", "Kolaborasi", "Pendidikan", "Komunikasi", "Event Management"]
+  const categories = ['Semua', 'Kepemimpinan', 'Inovasi', 'Kolaborasi', 'Pendidikan', 'Komunikasi', 'Event Management'];
 
   return (
     <main className="min-h-screen pt-16">
@@ -98,7 +98,9 @@ export default function ArticlesPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="font-expanded font-black text-4xl sm:text-6xl lg:text-7xl mb-6 text-brand-blue">ARTIKEL</h1>
+            <h1 className="font-expanded font-black text-4xl sm:text-6xl lg:text-7xl mb-6 text-brand-blue">
+              FON UPDATE
+            </h1>
             <p className="text-xl sm:text-2xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
               Wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia
             </p>
@@ -118,7 +120,7 @@ export default function ArticlesPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative overflow-hidden">
                   <img
-                    src={featuredArticle.image || "/placeholder.svg"}
+                    src={featuredArticle.image || '/placeholder.svg'}
                     alt={featuredArticle.title}
                     className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -183,7 +185,7 @@ export default function ArticlesPage() {
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden">
                     <img
-                      src={article.image || "/placeholder.svg"}
+                      src={article.image || '/placeholder.svg'}
                       alt={article.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -228,5 +230,5 @@ export default function ArticlesPage() {
 
       <Footer />
     </main>
-  )
+  );
 }
