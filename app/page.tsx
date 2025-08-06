@@ -10,7 +10,6 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      {/* <MerchSection /> */}
       <Footer />
     </main>
   );
