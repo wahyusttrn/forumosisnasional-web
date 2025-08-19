@@ -21,7 +21,8 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-blue/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-expanded font-black text-xl text-brand-blue">
+          <Link href="/" className="font-expanded font-black text-xl text-brand-blue flex items-center gap-3">
+            <img src="/logo_FON.png" height={50} width={50} />
             FON XII
           </Link>
 
