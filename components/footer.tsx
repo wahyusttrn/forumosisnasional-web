@@ -22,20 +22,23 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/forumosisnasional/"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                target="_blank"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://x.com/forumosis_id"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                target="_blank"
               >
                 <Twitter size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@forumosisnasional"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                target="_blank"
               >
                 <Youtube size={20} />
               </a>
@@ -46,6 +49,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Tautan Cepat</h4>
             <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-white/80 hover:text-white transition-colors">
+                  Beranda
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="text-white/80 hover:text-white transition-colors">
                   Tentang Kami
@@ -66,11 +74,11 @@ export default function Footer() {
                   Acara
                 </Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href="/merch" className="text-white/80 hover:text-white transition-colors">
                   Merchandise
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="text-white/80 hover:text-white transition-colors">
                   Kontak
@@ -89,14 +97,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-white/60" />
-                <span className="text-white/80">+62 21 1234 5678</span>
+                <span className="text-white/80">+62 813-8501-1619</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center">
-          <p className="text-white/60">© 2024 Forum OSIS Nasional. Semua hak dilindungi undang-undang.</p>
+          <p className="text-white/60">© {new Date().getFullYear()} Forum OSIS Nasional</p>
         </div>
       </div>
     </footer>
