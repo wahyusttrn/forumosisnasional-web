@@ -39,12 +39,12 @@ export default function HeroSection() {
             Tentang Kami
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
           </Link>
-          <Link
+          {/* <Link
             href="/"
             className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all duration-200"
           >
             Lihat Program Kami
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

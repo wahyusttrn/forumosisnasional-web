@@ -1,63 +1,47 @@
-import { Target, Heart, Lightbulb, Users, User, Clock, ArrowRight } from 'lucide-react';
+import {
+  Target,
+  Heart,
+  Users,
+  User,
+  Clock,
+  ArrowRight,
+  Sparkles,
+  FileSliders,
+  Laptop,
+  Calendar,
+  Handshake,
+  Waypoints
+} from 'lucide-react';
 import Link from 'next/link';
+import allArticles from '../app/articles/data.json';
 
 export default function AboutSection() {
+  const articles = allArticles.filter((e) => e.id <= 3);
+
   const values = [
     {
-      icon: Target,
-      title: 'Visi Jelas',
-      description: 'Menjadi wadah pengembangan kepemimpinan siswa terdepan di Indonesia'
-    },
-    {
-      icon: Heart,
-      title: 'Dedikasi Tinggi',
-      description: 'Berkomitmen penuh dalam setiap program dan kegiatan yang dilaksanakan'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Inovasi Berkelanjutan',
-      description: 'Selalu mencari cara baru untuk meningkatkan kualitas organisasi siswa'
+      icon: Sparkles,
+      title: 'Representasi',
+      description:
+        'FON menjadi wadah bagi OSIS untuk menyuarakan aspirasi, sehingga suara pelajar bisa lebih terdengar oleh pemerintah, lembaga pendidikan, dan pihak eksternal lainnya.'
     },
     {
       icon: Users,
-      title: 'Kolaborasi Kuat',
-      description: 'Membangun jaringan solid antar OSIS se-Indonesia untuk kemajuan bersama'
-    }
-  ];
-
-  const articles = [
-    {
-      id: 2,
-      title: 'Inovasi Program OSIS: Dari Tradisional ke Digital',
-      excerpt:
-        'Transformasi program OSIS tradisional menjadi format digital yang lebih engaging dan efektif untuk siswa modern.',
-      author: 'Ahmad Rizki',
-      date: '12 Desember 2024',
-      readTime: '6 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Inovasi'
+      title: 'Kolaborasi',
+      description:
+        'Menguatkan kerja sama dengan Forum OSIS Daerah, organisasi kepemudaan, instansi pemerintah, serta lembaga lain yang memiliki visi yang sama.'
     },
     {
-      id: 3,
-      title: 'Kolaborasi Antar Sekolah: Kunci Sukses OSIS Nasional',
-      excerpt:
-        'Pentingnya membangun jaringan dan kolaborasi yang kuat antar OSIS sekolah untuk mencapai tujuan bersama.',
-      author: 'Sari Indah',
-      date: '10 Desember 2024',
-      readTime: '5 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Kolaborasi'
+      icon: Heart,
+      title: 'Komunikasi',
+      description:
+        'Menyediakan ruang dan media agar sekolah-sekolah dapat saling bertukar informasi, pengalaman, dan ide dalam mengelola OSIS.'
     },
     {
-      id: 4,
-      title: 'Peran OSIS dalam Pengembangan Karakter Siswa',
-      excerpt:
-        'Bagaimana kegiatan OSIS dapat menjadi wadah efektif untuk mengembangkan karakter dan soft skills siswa.',
-      author: 'Budi Santoso',
-      date: '8 Desember 2024',
-      readTime: '7 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Pendidikan'
+      icon: Target,
+      title: 'Eksekusi',
+      description:
+        'Mengembangkan dan melaksanakan program nyata yang bermanfaat, seperti diskusi, beasiswa, maupun audiensi dengan pemangku kepentingan.'
     }
   ];
 
@@ -73,7 +57,7 @@ export default function AboutSection() {
           <div className="w-full h-full bg-light-blue flex items-center justify-center rounded-2xl">
             <div className="text-center">
               <img src="/pradit.png" height={270} width={270} />
-              <div className="text-brand-blue font-semibold">Pradit</div>
+              <div className="text-brand-blue font-semibold">Praditya Muhammad</div>
             </div>
           </div>
 
@@ -105,11 +89,10 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-expanded font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
-            TENTANG KAMI
+            NILAI-NILAI KAMI
           </h2>
           <p className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
-            Forum OSIS Nasional adalah organisasi yang menghubungkan seluruh OSIS di Indonesia. Selama 12 tahun, kami
-            telah menjadi jembatan komunikasi, kolaborasi, dan pengembangan kepemimpinan siswa di tingkat nasional.
+            FON dilandansi oleh nilai-nilai utama yang memperkuat Langkah pengurus OSIS di Indonesia.
           </p>
         </div>
 
@@ -140,35 +123,57 @@ export default function AboutSection() {
         </div>
 
         <div className="flex flex-col gap-10 items-center">
-          <div className="text-center group max-w-56">
+          <div className="text-center group max-w-96">
             <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-              <Users className="text-brand-blue" size={32} />
+              <FileSliders className="text-brand-blue" size={32} />
             </div>
             <h3 className="font-expanded font-bold text-xl text-brand-blue">BPH</h3>
-            <p className="text-brand-blue/70 leading-relaxed">Ngapain?</p>
+            <p className="text-brand-blue/70 leading-relaxed">
+              Struktur organisasi yang bertugas mengkoordinir dan memfasilitasi kegiatan kepengurusan Forum OSIS
+              Nasional meliputi program kerja, administrasi, dan keuangan organisasi.
+            </p>
           </div>
 
-          <div className="flex gap-10">
+          <div className="flex gap-10 flex-col md:flex-row">
             <div className="text-center group max-w-56">
               <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                <Users className="text-brand-blue" size={32} />
+                <Calendar className="text-brand-blue" size={32} />
               </div>
-              <h3 className="font-expanded font-bold text-xl text-brand-blue">Kominfo?</h3>
-              <p className="text-brand-blue/70 leading-relaxed">Ngapain?</p>
+              <h3 className="font-expanded font-bold text-xl text-brand-blue">Internal</h3>
+              <p className="text-brand-blue/70 leading-relaxed">
+                Mengkoordinir komunikasi dan perkembangan antar divisi internal terdiri atas PSDM (Sumber Daya Manusia)
+                dan Litbang (Penelitian dan pengembangan).
+              </p>
             </div>
             <div className="text-center group max-w-56">
               <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                <Users className="text-brand-blue" size={32} />
+                <Waypoints className="text-brand-blue" size={32} />
               </div>
-              <h3 className="font-expanded font-bold text-xl text-brand-blue">Kominfo?</h3>
-              <p className="text-brand-blue/70 leading-relaxed">Ngapain?</p>
+              <h3 className="font-expanded font-bold text-xl text-brand-blue">Eksternal</h3>
+              <p className="text-brand-blue/70 leading-relaxed">
+                Menjaga relasi FON dengan lembaga luar dan mengawal program tiga divisi: Hukum & Kerjasama, Aksi &
+                Kemasyarakatan, serta Kewirausahaan.
+              </p>
             </div>
             <div className="text-center group max-w-56">
               <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                <Users className="text-brand-blue" size={32} />
+                <Laptop className="text-brand-blue" size={32} />
               </div>
               <h3 className="font-expanded font-bold text-xl text-brand-blue">Kominfo</h3>
-              <p className="text-brand-blue/70 leading-relaxed">Ngapain?</p>
+              <p className="text-brand-blue/70 leading-relaxed">
+                Bertanggungjawab atas seluruh media publikasi dan hubungan komunikasi. Mengawal tiga divisi: Humas,
+                Publikasi, dan Kreatif Desain.
+              </p>
+            </div>
+            <div className="text-center group max-w-56">
+              <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                <Handshake className="text-brand-blue" size={32} />
+              </div>
+              <h3 className="font-expanded font-bold text-xl text-brand-blue">Regional</h3>
+              <p className="text-brand-blue/70 leading-relaxed">
+                Mengkoordinir dan mengawal perkembangan wilayah regional nasional. Mengawal 6 wilayah: Jawa, Sumatera,
+                Kalimantan, Sulawesi, Papua Maluku, dan Bali Nusra.
+              </p>
             </div>
           </div>
         </div>
@@ -178,7 +183,8 @@ export default function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="font-expanded font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">FON UPDATE</h2>
           <p className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
-            Cari tahu tentang kami dalam segment #FONLine
+            Wadah informasi berisi wawasan, tips, dan inspirasi untuk mendukung pengembangan organisasi siswa di seluruh
+            Indonesia.
           </p>
         </div>
 
@@ -189,7 +195,7 @@ export default function AboutSection() {
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden">
                     <img
-                      src={article.image || '/placeholder.svg'}
+                      src={article.imageUrl || '/placeholder.svg'}
                       alt={article.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -203,16 +209,12 @@ export default function AboutSection() {
                     <h3 className="font-semibold text-lg mb-3 text-brand-blue group-hover:text-brand-blue/80 transition-colors line-clamp-2">
                       {article.title}
                     </h3>
-                    <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">{article.excerpt}</p>
+                    <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">{article.content}</p>
                     <div className="flex items-center justify-between text-xs text-brand-blue/60">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
-                          <User size={12} />
-                          <span>{article.author}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
                           <Clock size={12} />
-                          <span>{article.readTime}</span>
+                          <span>{article.readInMinutes} menit</span>
                         </div>
                       </div>
                       <span>{article.date}</span>
@@ -232,9 +234,9 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <h2 className="font-expanded text-center font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
+      {/* <h2 className="font-expanded text-center font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
         ----- post ig
-      </h2>
+      </h2> */}
     </section>
   );
 }

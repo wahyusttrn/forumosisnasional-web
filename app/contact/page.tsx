@@ -14,15 +14,15 @@ export default function ContactPage() {
     },
     {
       title: 'Twitter / X',
-      description: '@ForumOSISID',
+      description: '@forumosis_id',
       icon: Twitter,
-      href: 'https://twitter.com/ForumOSISID',
+      href: 'https://x.com/forumosis_id',
       color: 'bg-black',
       textColor: 'text-white'
     },
     {
       title: 'Medium',
-      description: 'Forum OSIS Nasional',
+      description: '@sekretariat.fon',
       icon: Pencil,
       href: 'https://medium.com/@sekretariat.fon',
       color: 'bg-white',
@@ -38,9 +38,9 @@ export default function ContactPage() {
     },
     {
       title: 'WhatsApp',
-      description: '+62 812-3456-7890',
+      description: '+62 813-8501-1619',
       icon: MessageCircle,
-      href: 'https://wa.me/6281234567890',
+      href: 'https://wa.me/6281385011619',
       color: 'bg-green-500',
       textColor: 'text-white'
     },
@@ -54,9 +54,9 @@ export default function ContactPage() {
     },
     {
       title: 'Website Resmi',
-      description: 'www.forumosisnasional.com',
+      description: 'www.forumosisnasional.id',
       icon: Globe,
-      href: 'https://forumosisnasional.com',
+      href: 'https://www.forumosisnasional.id/',
       color: 'bg-brand-blue',
       textColor: 'text-white'
     }
@@ -154,7 +154,7 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6281385011619"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-brand-blue px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-colors"

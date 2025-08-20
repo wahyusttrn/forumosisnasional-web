@@ -2,88 +2,22 @@ import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
+import articles from './data.json';
 
 export default function ArticlesPage() {
-  const featuredArticle = {
-    id: 1,
-    title: 'Membangun Kepemimpinan Siswa di Era Digital',
-    excerpt:
-      'Bagaimana Forum OSIS Nasional mengadaptasi program kepemimpinan untuk menghadapi tantangan era digital dan mempersiapkan siswa menjadi pemimpin masa depan.',
-    author: 'Tim Editorial Forum OSIS',
-    date: '15 Desember 2024',
-    readTime: '8 menit',
-    image: '/placeholder.svg?height=400&width=800',
-    category: 'Kepemimpinan'
-  };
+  // const featuredArticle = {
+  //   id: 1,
+  //   title: 'Membangun Kepemimpinan Siswa di Era Digital',
+  //   excerpt:
+  //     'Bagaimana Forum OSIS Nasional mengadaptasi program kepemimpinan untuk menghadapi tantangan era digital dan mempersiapkan siswa menjadi pemimpin masa depan.',
+  //   author: 'Tim Editorial Forum OSIS',
+  //   date: '15 Desember 2024',
+  //   readTime: '8 menit',
+  //   image: '/placeholder.svg?height=400&width=800',
+  //   category: 'Kepemimpinan'
+  // };
 
-  const articles = [
-    {
-      id: 2,
-      title: 'Inovasi Program OSIS: Dari Tradisional ke Digital',
-      excerpt:
-        'Transformasi program OSIS tradisional menjadi format digital yang lebih engaging dan efektif untuk siswa modern.',
-      author: 'Ahmad Rizki',
-      date: '12 Desember 2024',
-      readTime: '6 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Inovasi'
-    },
-    {
-      id: 3,
-      title: 'Kolaborasi Antar Sekolah: Kunci Sukses OSIS Nasional',
-      excerpt:
-        'Pentingnya membangun jaringan dan kolaborasi yang kuat antar OSIS sekolah untuk mencapai tujuan bersama.',
-      author: 'Sari Indah',
-      date: '10 Desember 2024',
-      readTime: '5 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Kolaborasi'
-    },
-    {
-      id: 4,
-      title: 'Peran OSIS dalam Pengembangan Karakter Siswa',
-      excerpt:
-        'Bagaimana kegiatan OSIS dapat menjadi wadah efektif untuk mengembangkan karakter dan soft skills siswa.',
-      author: 'Budi Santoso',
-      date: '8 Desember 2024',
-      readTime: '7 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Pendidikan'
-    },
-    {
-      id: 5,
-      title: 'Strategi Komunikasi Efektif untuk Organisasi Siswa',
-      excerpt:
-        'Tips dan strategi komunikasi yang dapat diterapkan oleh pengurus OSIS untuk meningkatkan engagement dengan siswa.',
-      author: 'Maya Putri',
-      date: '5 Desember 2024',
-      readTime: '4 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Komunikasi'
-    },
-    {
-      id: 6,
-      title: 'Mengelola Event Sekolah: Panduan Lengkap untuk OSIS',
-      excerpt: 'Panduan step-by-step untuk merencanakan dan mengelola event sekolah yang sukses dan berkesan.',
-      author: 'Doni Pratama',
-      date: '3 Desember 2024',
-      readTime: '9 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Event Management'
-    },
-    {
-      id: 7,
-      title: 'Fundraising untuk Kegiatan OSIS: Tips dan Trik',
-      excerpt: 'Strategi kreatif dan efektif untuk menggalang dana bagi kegiatan OSIS tanpa memberatkan siswa.',
-      author: 'Lisa Anggraini',
-      date: '1 Desember 2024',
-      readTime: '6 menit',
-      image: '/placeholder.svg?height=300&width=400',
-      category: 'Fundraising'
-    }
-  ];
-
-  const categories = ['Semua', 'Kepemimpinan', 'Inovasi', 'Kolaborasi', 'Pendidikan', 'Komunikasi', 'Event Management'];
+  // const categories = ['Semua', 'Kepemimpinan', 'Inovasi', 'Kolaborasi', 'Pendidikan', 'Komunikasi', 'Event Management'];
 
   return (
     <main className="min-h-screen pt-16">
@@ -102,14 +36,14 @@ export default function ArticlesPage() {
               FON UPDATE
             </h1>
             <p className="text-xl sm:text-2xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
-              Wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia
+              Wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia.
             </p>
           </div>
         </div>
       </section>
 
       {/* Featured Article */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="font-expanded font-bold text-2xl text-brand-blue mb-2">Artikel Unggulan</h2>
@@ -158,10 +92,10 @@ export default function ArticlesPage() {
             </div>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Categories Filter */}
-      <section className="py-8 border-b border-brand-blue/10">
+      {/* <section className="py-8 border-b border-brand-blue/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -174,7 +108,7 @@ export default function ArticlesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Articles Grid */}
       <section className="py-20">
@@ -185,7 +119,7 @@ export default function ArticlesPage() {
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden">
                     <img
-                      src={article.image || '/placeholder.svg'}
+                      src={article.imageUrl || '/placeholder.svg'}
                       alt={article.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -199,16 +133,12 @@ export default function ArticlesPage() {
                     <h3 className="font-semibold text-lg mb-3 text-brand-blue group-hover:text-brand-blue/80 transition-colors line-clamp-2">
                       {article.title}
                     </h3>
-                    <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">{article.excerpt}</p>
+                    <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">{article.content}</p>
                     <div className="flex items-center justify-between text-xs text-brand-blue/60">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
-                          <User size={12} />
-                          <span>{article.author}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
                           <Clock size={12} />
-                          <span>{article.readTime}</span>
+                          <span>{article.readInMinutes} menit</span>
                         </div>
                       </div>
                       <span>{article.date}</span>
@@ -217,13 +147,6 @@ export default function ArticlesPage() {
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <button className="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-blue/90 transition-colors">
-              Muat Lebih Banyak Artikel
-            </button>
           </div>
         </div>
       </section>

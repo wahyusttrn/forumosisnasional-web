@@ -1,22 +1,21 @@
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import { Users, Target, Award, Globe } from "lucide-react"
+import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
+import { Target, Award, Megaphone, Hand, LandPlot } from 'lucide-react';
 
 export default function AboutPage() {
   const milestones = [
-    { year: "2012", event: "Forum OSIS Nasional didirikan" },
-    { year: "2015", event: "Mencapai 100 sekolah anggota" },
-    { year: "2018", event: "Peluncuran program nasional pertama" },
-    { year: "2020", event: "Adaptasi digital selama pandemi" },
-    { year: "2022", event: "Mencapai 1000+ anggota aktif" },
-    { year: "2024", event: "Ekspansi ke seluruh Indonesia" },
-  ]
+    { year: '2012', event: 'Program ISLC perdana' },
+    { year: '2013', event: 'Pendirian Forum OSIS Nusantara (FON)' },
+    { year: '2015', event: 'Digitalisasi Forum OSIS Nusantara (FON)' },
+    { year: '2021', event: 'Rebranding Forum OSIS Nasional' },
+    { year: '2022', event: 'Peluncuran program Beasiswa FON' },
+    { year: '2024', event: 'Peluncuran program offline FON perdana RISE 2025' }
+  ];
 
   return (
     <main className="min-h-screen pt-16">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-10 w-40 h-40 bg-light-blue/30 organic-shape animate-pulse"></div>
@@ -29,13 +28,13 @@ export default function AboutPage() {
               TENTANG KAMI
             </h1>
             <p className="text-xl sm:text-2xl text-brand-blue/80 max-w-4xl mx-auto leading-relaxed">
-              Perjalanan 12 tahun membangun ekosistem OSIS terkuat di Indonesia
+              12 Tahun Pengabdian, FON selalu konsisten menjadi wadah aspirasi dan melahirkan gagasan serta program
+              nyata bagi pelajar Indonesia.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -43,10 +42,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-6">
                 <Target className="text-brand-blue" size={32} />
               </div>
-              <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Visi Kami</h2>
+              <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Visi</h2>
               <p className="text-brand-blue/80 text-lg leading-relaxed">
-                Menjadi wadah pengembangan kepemimpinan siswa terdepan di Indonesia yang mampu melahirkan generasi
-                pemimpin masa depan yang berkarakter, inovatif, dan berdampak positif bagi bangsa dan negara.
+                Menjadikan Forum OSIS Nasional sebagai wadah representasi pelajar indonesia dengan mengedepankan
+                pengembangan moral, karakter, dan intelektual melalul 3B (Bersinergi, Berdampak & Berkelanjutan).
               </p>
             </div>
 
@@ -54,19 +53,65 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-6">
                 <Award className="text-brand-blue" size={32} />
               </div>
-              <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Misi Kami</h2>
+              <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Misi</h2>
               <ul className="text-brand-blue/80 text-lg leading-relaxed space-y-3">
-                <li>• Menghubungkan seluruh OSIS di Indonesia dalam satu jaringan yang kuat</li>
-                <li>• Mengembangkan program pelatihan kepemimpinan berkualitas tinggi</li>
-                <li>• Memfasilitasi kolaborasi antar sekolah untuk kemajuan bersama</li>
-                <li>• Menjadi suara siswa Indonesia di tingkat nasional</li>
+                <li>
+                  1. Gerakan Indonesia Bermoral – Mengedepankan pendidikan moral dan 9 nilai integritas dalam kehidupan
+                  berbangsa.
+                </li>
+                <li>
+                  2. Indonesia Pintar Bermartabat – Membangun inklusi, kolaborasi, dan kesempatan pengembangan diri bagi
+                  pelajar.
+                </li>
+                <li>
+                  3. Gerakan Indonesia Berkelanjutan – Mewujudkan program berkelanjutan bersama berbagai instansi
+                  terkait.
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-expanded font-black text-3xl sm:text-5xl mb-6 text-brand-blue">FUNGSI</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Megaphone,
+                title: 'Komunikator',
+                desc: 'Menyediakan ruang dan media agar sekolah-sekolah dan forum daerah dapat saling bertukar informasi, pengalaman, dan ide dalam mengelola OSIS.'
+              },
+              {
+                icon: Hand,
+                title: 'Pemberdaya',
+                desc: 'Sebagai wadah pemberdayaan potensi serta minat dan bakat pemuda pelajar seluruh Indonesia.'
+              },
+              {
+                icon: LandPlot,
+                title: 'Fasilitator',
+                desc: 'Sebagai fasilitator sekaligus penghimpun aspirasi, pemikiran, serta gagasan pemuda pelajar Indonesia.'
+              }
+            ].map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="text-brand-blue" size={32} />
+                  </div>
+                  <h3 className="font-expanded font-bold text-xl mb-3 text-brand-blue">{value.title}</h3>
+                  <p className="text-brand-blue/70">{value.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-light-blue/20 organic-shape-3 -translate-y-1/2"></div>
@@ -74,7 +119,7 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-expanded font-black text-3xl sm:text-5xl mb-6 text-brand-blue">PERJALANAN KAMI</h2>
+            <h2 className="font-expanded font-black text-3xl sm:text-5xl mb-6 text-brand-blue">SEJARAH KAMI</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -91,36 +136,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Values */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-expanded font-black text-3xl sm:text-5xl mb-6 text-brand-blue">NILAI-NILAI KAMI</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Users, title: "Kolaborasi", desc: "Membangun kekuatan melalui kerja sama" },
-              { icon: Target, title: "Integritas", desc: "Berkomitmen pada nilai-nilai luhur" },
-              { icon: Award, title: "Prestasi", desc: "Selalu berusaha memberikan yang terbaik" },
-              { icon: Globe, title: "Inklusivitas", desc: "Terbuka untuk semua siswa Indonesia" },
-            ].map((value, index) => {
-              const Icon = value.icon
-              return (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="text-brand-blue" size={32} />
-                  </div>
-                  <h3 className="font-expanded font-bold text-xl mb-3 text-brand-blue">{value.title}</h3>
-                  <p className="text-brand-blue/70">{value.desc}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </main>
-  )
+  );
 }
