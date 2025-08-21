@@ -2,6 +2,57 @@ import { Calendar, Clock, ArrowLeft, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import articles from '../data.json';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const article = articles.find((e) => e.id === Number(id));
+
+  if (!article) {
+    return {
+      title: 'Artikel Tidak Ditemukan - Forum OSIS Nasional',
+      description: 'Artikel yang Anda cari tidak ditemukan.'
+    };
+  }
+
+  return {
+    title: `${article.title} - Forum OSIS Nasional`,
+    description: article.content.substring(0, 160).replace(/<[^>]*>/g, '') + '...',
+    keywords: `Forum OSIS Nasional, FON, ${article.category}, kepemimpinan pelajar, OSIS Indonesia, artikel pendidikan`,
+    authors: [{ name: 'Forum OSIS Nasional' }],
+    openGraph: {
+      title: article.title,
+      description: article.content.substring(0, 160).replace(/<[^>]*>/g, '') + '...',
+      type: 'article',
+      publishedTime: article.date,
+      authors: ['Forum OSIS Nasional'],
+      images: article.imageUrl
+        ? [
+            {
+              url: article.imageUrl,
+              width: 1200,
+              height: 630,
+              alt: article.title
+            }
+          ]
+        : [],
+      siteName: 'Forum OSIS Nasional'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.content.substring(0, 160).replace(/<[^>]*>/g, '') + '...',
+      images: article.imageUrl ? [article.imageUrl] : []
+    },
+    robots: {
+      index: true,
+      follow: true
+    },
+    alternates: {
+      canonical: `/articles/${id}`
+    }
+  };
+}
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import { Instagram, Twitter, Youtube, Mail, MessageCircle, Globe, Users, ExternalLink, Pencil } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Hubungi Kami - Forum OSIS Nasional',
+  description:
+    'Terhubung dengan Forum OSIS Nasional melalui berbagai platform dan saluran komunikasi. Instagram, WhatsApp, Email, dan media sosial lainnya.',
+  keywords: 'kontak FON, hubungi Forum OSIS Nasional, media sosial FON, WhatsApp FON, email FON',
+  openGraph: {
+    title: 'Hubungi Kami - Forum OSIS Nasional',
+    description: 'Terhubung dengan Forum OSIS Nasional melalui berbagai platform dan saluran komunikasi.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function ContactPage() {
   const contactLinks = [

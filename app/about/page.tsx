@@ -1,4 +1,19 @@
+import type { Metadata } from 'next';
 import { Award, Megaphone, Hand, LandPlot, BrainCog } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Tentang Kami - Forum OSIS Nasional',
+  description:
+    '12 Tahun Pengabdian, FON selalu konsisten menjadi wadah aspirasi dan melahirkan gagasan serta program nyata bagi pelajar Indonesia. Pelajari visi, misi, dan sejarah kami.',
+  keywords: 'tentang FON, visi misi FON, sejarah Forum OSIS Nasional, organisasi pelajar Indonesia',
+  openGraph: {
+    title: 'Tentang Kami - Forum OSIS Nasional',
+    description:
+      '12 Tahun Pengabdian, FON selalu konsisten menjadi wadah aspirasi dan melahirkan gagasan serta program nyata bagi pelajar Indonesia.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function AboutPage() {
   const milestones = [

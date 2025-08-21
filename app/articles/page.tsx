@@ -1,6 +1,21 @@
+import type { Metadata } from 'next';
 import { Clock } from 'lucide-react';
 import Link from 'next/link';
 import articles from './data.json';
+
+export const metadata: Metadata = {
+  title: 'FON Update - Artikel dan Wawasan',
+  description:
+    'Kumpulan artikel, wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia dari Forum OSIS Nasional.',
+  keywords: 'artikel FON, wawasan OSIS, tips organisasi siswa, inspirasi pelajar Indonesia, FON Update',
+  openGraph: {
+    title: 'FON Update - Artikel dan Wawasan',
+    description:
+      'Kumpulan artikel, wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia dari Forum OSIS Nasional.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function ArticlesPage() {
   return (

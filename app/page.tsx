@@ -13,6 +13,21 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import allArticles from './articles/data.json';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Forum OSIS Nasional - Wadah Aspirasi Pelajar Indonesia',
+  description:
+    'Forum OSIS Nasional (FON) adalah wadah representasi pelajar Indonesia yang mengedepankan pengembangan moral, karakter, dan intelektual. #OSISUntukIndonesia',
+  keywords: 'Forum OSIS Nasional, FON, OSIS, pelajar Indonesia, organisasi siswa, pendidikan, kepemudaan',
+  openGraph: {
+    title: 'Forum OSIS Nasional - Wadah Aspirasi Pelajar Indonesia',
+    description:
+      'Forum OSIS Nasional (FON) adalah wadah representasi pelajar Indonesia yang mengedepankan pengembangan moral, karakter, dan intelektual.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function HomePage() {
   const articles = allArticles.filter((e) => e.id <= 3);
