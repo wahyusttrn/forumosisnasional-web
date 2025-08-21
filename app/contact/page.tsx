@@ -1,5 +1,3 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
 import { Instagram, Twitter, Youtube, Mail, MessageCircle, Globe, Users, ExternalLink, Pencil } from 'lucide-react';
 
 export default function ContactPage() {
@@ -60,20 +58,10 @@ export default function ContactPage() {
       color: 'bg-brand-blue',
       textColor: 'text-white'
     }
-    // {
-    //   title: 'Discord Server',
-    //   description: 'Komunitas OSIS Indonesia',
-    //   icon: Users,
-    //   href: 'https://discord.gg/forumosis',
-    //   color: 'bg-indigo-600',
-    //   textColor: 'text-white'
-    // }
   ];
 
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -172,8 +160,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

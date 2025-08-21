@@ -2,6 +2,8 @@ import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter, Lexend } from 'next/font/google';
 import './globals.css';
+import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,7 +25,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${inter.variable} ${lexend.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

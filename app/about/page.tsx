@@ -1,5 +1,3 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
 import { Target, Award, Megaphone, Hand, LandPlot } from 'lucide-react';
 
 export default function AboutPage() {
@@ -9,13 +7,11 @@ export default function AboutPage() {
     { year: '2015', event: 'Digitalisasi Forum OSIS Nusantara (FON)' },
     { year: '2021', event: 'Rebranding Forum OSIS Nasional' },
     { year: '2022', event: 'Peluncuran program Beasiswa FON' },
-    { year: '2024', event: 'Peluncuran program offline FON perdana RISE 2025' }
+    { year: '2024', event: 'Peluncuran program offline FON perdana RISE 2025' }
   ];
 
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-10 w-40 h-40 bg-light-blue/30 organic-shape animate-pulse"></div>
@@ -135,8 +131,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

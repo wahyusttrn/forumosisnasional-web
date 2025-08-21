@@ -1,6 +1,4 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
-import { Calendar, User, Clock, ArrowLeft, Share2, BookOpen } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import articles from '../data.json';
 import { redirect } from 'next/navigation';
@@ -12,31 +10,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     redirect('/articles');
   }
 
-  // const relatedArticles = [
-  //   {
-  //     id: 2,
-  //     title: 'Inovasi Program OSIS: Dari Tradisional ke Digital',
-  //     image: '/placeholder.svg?height=200&width=300',
-  //     date: '12 Desember 2024'
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Kolaborasi Antar Sekolah: Kunci Sukses OSIS Nasional',
-  //     image: '/placeholder.svg?height=200&width=300',
-  //     date: '10 Desember 2024'
-  //   },
-  //   {
-  //     id: 4,
-  //     title: 'Peran OSIS dalam Pengembangan Karakter Siswa',
-  //     image: '/placeholder.svg?height=200&width=300',
-  //     date: '8 Desember 2024'
-  //   }
-  // ];
-
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       {/* Back Button */}
       <section className="py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,36 +86,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* <div className="text-center mb-12">
-            <h2 className="font-expanded font-bold text-2xl sm:text-3xl text-brand-blue mb-4">Artikel Terkait</h2>
-            <p className="text-brand-blue/70">Baca artikel lainnya yang mungkin menarik untuk Anda</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {relatedArticles.map((relatedArticle) => (
-              <Link key={relatedArticle.id} href={`/articles/${relatedArticle.id}`}>
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={relatedArticle.image || '/placeholder.svg'}
-                      alt={relatedArticle.title}
-                      className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-semibold text-lg mb-3 text-brand-blue group-hover:text-brand-blue/80 transition-colors line-clamp-2">
-                      {relatedArticle.title}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-brand-blue/60">
-                      <Calendar size={14} />
-                      <span>{relatedArticle.date}</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div> */}
-
           <div className="text-center">
             <Link
               href="/articles"
@@ -152,8 +97,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

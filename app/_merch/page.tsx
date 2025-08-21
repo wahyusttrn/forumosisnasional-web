@@ -1,5 +1,3 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
 import { ShoppingBag, Star, Heart, Filter, Search } from 'lucide-react';
 
 export default function MerchPage() {
@@ -86,8 +84,6 @@ export default function MerchPage() {
 
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -108,21 +104,21 @@ export default function MerchPage() {
       </section>
 
       {/* Filters & Search */}
-      {/* <section className="py-8 border-b border-brand-blue/10">
+      <section className="py-8 border-b border-brand-blue/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between"> */}
-      {/* Search */}
-      {/* <div className="relative flex-1 max-w-md">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-blue/50" size={20} />
               <input
                 type="text"
                 placeholder="Cari produk..."
                 className="w-full pl-10 pr-4 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-brand-blue/20 focus:outline-none focus:border-brand-blue"
               />
-            </div> */}
+            </div>
 
-      {/* Categories */}
-      {/* <div className="flex flex-wrap gap-2">
+            {/* Categories */}
+            <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -131,16 +127,16 @@ export default function MerchPage() {
                   {category}
                 </button>
               ))}
-            </div> */}
+            </div>
 
-      {/* Filter Button */}
-      {/* <button className="flex items-center gap-2 px-6 py-3 bg-brand-blue text-white rounded-full hover:bg-brand-blue/90 transition-colors">
+            {/* Filter Button */}
+            <button className="flex items-center gap-2 px-6 py-3 bg-brand-blue text-white rounded-full hover:bg-brand-blue/90 transition-colors">
               <Filter size={20} />
               Filter
             </button>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Products Grid */}
       <section className="py-20">
@@ -228,15 +224,13 @@ export default function MerchPage() {
           </div>
 
           {/* Load More */}
-          {/* <div className="text-center mt-12">
+          <div className="text-center mt-12">
             <button className="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-blue/90 transition-colors">
               Muat Lebih Banyak
             </button>
-          </div> */}
+          </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }
