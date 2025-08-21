@@ -1,4 +1,4 @@
-import { Target, Award, Megaphone, Hand, LandPlot } from 'lucide-react';
+import { Award, Megaphone, Hand, LandPlot, BrainCog } from 'lucide-react';
 
 export default function AboutPage() {
   const milestones = [
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
               <div className="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-6">
-                <Target className="text-brand-blue" size={32} />
+                <BrainCog className="text-brand-blue" size={32} />
               </div>
               <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Visi</h2>
               <p className="text-brand-blue/80 text-lg leading-relaxed">

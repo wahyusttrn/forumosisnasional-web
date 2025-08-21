@@ -83,12 +83,12 @@ export default function HomePage() {
               Tentang Kami
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
-            {/* <Link
-              href="/"
+            <Link
+              href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all duration-200"
             >
-              Lihat Program Kami
-            </Link> */}
+              Kontak Kami
+            </Link>
           </div>
         </div>
       </section>
