@@ -14,6 +14,8 @@ import {
 import Link from 'next/link';
 import allArticles from './articles/data.json';
 import type { Metadata } from 'next';
+import ScrollAnimation from '@/components/scroll-animation';
+import ParallaxHero from '@/components/parallax-hero';
 
 export const metadata: Metadata = {
   title: 'Forum OSIS Nasional - Wadah Aspirasi Pelajar Indonesia',
@@ -62,16 +64,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/fotbar_FON.JPG?height=1080&width=1920"
-            alt="Forum OSIS Nasional"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-blue-900/50"></div>
-        </div>
-
+      <ParallaxHero imageUrl="/fotbar_FON.JPG?height=1080&width=1920" alt="Forum OSIS Nasional">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 organic-shape animate-pulse"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-white/10 organic-shape-2 animate-pulse delay-1000"></div>
@@ -80,33 +73,39 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="font-expanded font-black text-4xl sm:text-6xl lg:text-8xl mb-6 leading-tight text-white">
-            FORUM OSIS
-            <br />
-            NASIONAL
-          </h1>
+          <ScrollAnimation animation="fadeInUp">
+            <h1 className="font-expanded font-black text-4xl sm:text-6xl lg:text-8xl mb-6 leading-tight text-white">
+              FORUM OSIS
+              <br />
+              NASIONAL
+            </h1>
+          </ScrollAnimation>
 
-          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-medium">
-            #OSISUntukIndonesia
-          </p>
+          <ScrollAnimation animation="fadeInUp" delay={200}>
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-medium">
+              #OSISUntukIndonesia
+            </p>
+          </ScrollAnimation>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/about"
-              className="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-blue/90 transition-all duration-200 flex items-center justify-center gap-2 group"
-            >
-              Tentang Kami
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all duration-200"
-            >
-              Kontak Kami
-            </Link>
-          </div>
+          <ScrollAnimation animation="fadeInUp" delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/about"
+                className="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-blue/90 transition-all duration-200 flex items-center justify-center gap-2 group"
+              >
+                Tentang Kami
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all duration-200"
+              >
+                Kontak Kami
+              </Link>
+            </div>
+          </ScrollAnimation>
         </div>
-      </section>
+      </ParallaxHero>
 
       {/* About Section */}
       <section className="py-20 relative flex flex-col justify-center items-center gap-44">
@@ -115,7 +114,10 @@ export default function HomePage() {
           <div className="absolute bottom-10 left-0 w-48 h-48 bg-light-blue/30 organic-shape -translate-x-1/2"></div>
         </div>
 
-        <div className="w-5/6 mt-20 bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
+        <ScrollAnimation
+          animation="scaleIn"
+          className="w-5/6 mt-20 bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12"
+        >
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="w-full h-full bg-light-blue flex items-center justify-center rounded-2xl">
               <div className="text-center">
@@ -148,46 +150,46 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <ScrollAnimation animation="fadeInUp" className="text-center mb-16">
             <h2 className="font-expanded font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
               NILAI-NILAI KAMI
             </h2>
             <p className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
               FON dilandansi oleh nilai-nilai utama yang memperkuat Langkah pengurus OSIS di Indonesia.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="text-center group">
+                <ScrollAnimation key={index} animation="fadeInUp" delay={index * 100} className="text-center group">
                   <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="text-brand-blue" size={32} />
                   </div>
                   <h3 className="font-expanded font-bold text-xl mb-4 text-brand-blue">{value.title}</h3>
                   <p className="text-brand-blue/70 leading-relaxed">{value.description}</p>
-                </div>
+                </ScrollAnimation>
               );
             })}
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <ScrollAnimation animation="fadeInUp" className="text-center mb-16">
             <h2 className="font-expanded font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
               STRUKTUR FON
             </h2>
             <p className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed">
               Berikut merupakan struktur utama dari Forum OSIS Nasional.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="flex flex-col gap-10 items-center">
-            <div className="text-center group max-w-96">
+            <ScrollAnimation animation="scaleIn" className="text-center group max-w-96">
               <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                 <FileSliders className="text-brand-blue" size={32} />
               </div>
@@ -196,10 +198,10 @@ export default function HomePage() {
                 Struktur organisasi yang bertugas mengkoordinir dan memfasilitasi kegiatan kepengurusan Forum OSIS
                 Nasional meliputi program kerja, administrasi, dan keuangan organisasi.
               </p>
-            </div>
+            </ScrollAnimation>
 
             <div className="flex gap-10 flex-col md:flex-row">
-              <div className="text-center group max-w-56">
+              <ScrollAnimation animation="fadeInLeft" delay={100} className="text-center group max-w-56">
                 <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                   <Calendar className="text-brand-blue" size={32} />
                 </div>
@@ -208,8 +210,8 @@ export default function HomePage() {
                   Mengkoordinir komunikasi dan perkembangan antar divisi internal terdiri atas PSDM (Sumber Daya
                   Manusia) dan Litbang (Penelitian dan pengembangan).
                 </p>
-              </div>
-              <div className="text-center group max-w-56">
+              </ScrollAnimation>
+              <ScrollAnimation animation="fadeInUp" delay={200} className="text-center group max-w-56">
                 <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                   <Waypoints className="text-brand-blue" size={32} />
                 </div>
@@ -218,8 +220,8 @@ export default function HomePage() {
                   Menjaga relasi FON dengan lembaga luar dan mengawal program tiga divisi: Hukum & Kerjasama, Aksi &
                   Kemasyarakatan, serta Kewirausahaan.
                 </p>
-              </div>
-              <div className="text-center group max-w-56">
+              </ScrollAnimation>
+              <ScrollAnimation animation="fadeInUp" delay={300} className="text-center group max-w-56">
                 <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                   <Laptop className="text-brand-blue" size={32} />
                 </div>
@@ -228,8 +230,8 @@ export default function HomePage() {
                   Bertanggungjawab atas seluruh media publikasi dan hubungan komunikasi. Mengawal tiga divisi: Humas,
                   Publikasi, dan Kreatif Desain.
                 </p>
-              </div>
-              <div className="text-center group max-w-56">
+              </ScrollAnimation>
+              <ScrollAnimation animation="fadeInRight" delay={400} className="text-center group max-w-56">
                 <div className="w-20 h-20 bg-light-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                   <Handshake className="text-brand-blue" size={32} />
                 </div>
@@ -238,13 +240,13 @@ export default function HomePage() {
                   Mengkoordinir dan mengawal perkembangan wilayah regional nasional. Mengawal 6 wilayah: Jawa, Sumatera,
                   Kalimantan, Sulawesi, Papua Maluku, dan Bali Nusra.
                 </p>
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <ScrollAnimation animation="fadeInUp" className="text-center mb-16">
             <h2 className="font-expanded font-black text-3xl sm:text-5xl lg:text-6xl mb-6 text-brand-blue">
               FON UPDATE
             </h2>
@@ -252,51 +254,57 @@ export default function HomePage() {
               Wadah informasi berisi wawasan, tips, dan inspirasi untuk mendukung pengembangan organisasi siswa di
               seluruh Indonesia.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="flex flex-col gap-10 items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article) => (
-                <Link key={article.id} href={`/articles/${article.id}`}>
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={article.imageUrl || '/placeholder.svg'}
-                        alt={article.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-brand-blue text-white px-2 py-1 rounded-full text-xs font-semibold">
-                          {article.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-semibold text-lg mb-3 text-brand-blue group-hover:text-brand-blue/80 transition-colors line-clamp-2">
-                        {article.title}
-                      </h3>
-                      <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">{article.content}</p>
-                      <div className="flex items-center justify-between text-xs text-brand-blue/60">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                            <Clock size={12} />
-                            <span>{article.readInMinutes} menit</span>
-                          </div>
+              {articles.map((article, index) => (
+                <ScrollAnimation key={article.id} animation="fadeInUp" delay={index * 150}>
+                  <Link href={`/articles/${article.id}`}>
+                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                      <div className="relative overflow-hidden">
+                        <img
+                          src={article.imageUrl || '/placeholder.svg'}
+                          alt={article.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute top-3 left-3">
+                          <span className="bg-brand-blue text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            {article.category}
+                          </span>
                         </div>
-                        <span>{article.date}</span>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-semibold text-lg mb-3 text-brand-blue group-hover:text-brand-blue/80 transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-brand-blue/70 mb-4 text-sm leading-relaxed line-clamp-3">
+                          {article.content}
+                        </p>
+                        <div className="flex items-center justify-between text-xs text-brand-blue/60">
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-1">
+                              <Clock size={12} />
+                              <span>{article.readInMinutes} menit</span>
+                            </div>
+                          </div>
+                          <span>{article.date}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </ScrollAnimation>
               ))}
             </div>
-            <Link
-              href="/articles"
-              className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed underline flex items-center"
-            >
-              <p>Lihat semua artikel</p>
-              <ArrowRight size={20} />
-            </Link>
+            <ScrollAnimation animation="fadeInUp" delay={500}>
+              <Link
+                href="/articles"
+                className="text-lg sm:text-xl text-brand-blue/80 max-w-3xl mx-auto leading-relaxed underline flex items-center"
+              >
+                <p>Lihat semua artikel</p>
+                <ArrowRight size={20} />
+              </Link>
+            </ScrollAnimation>
           </div>
         </div>
 
