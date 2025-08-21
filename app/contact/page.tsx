@@ -1,6 +1,18 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
+import type { Metadata } from 'next';
 import { Instagram, Twitter, Youtube, Mail, MessageCircle, Globe, Users, ExternalLink, Pencil } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Hubungi Kami - Forum OSIS Nasional',
+  description:
+    'Terhubung dengan Forum OSIS Nasional melalui berbagai platform dan saluran komunikasi. Instagram, WhatsApp, Email, dan media sosial lainnya.',
+  keywords: 'kontak FON, hubungi Forum OSIS Nasional, media sosial FON, WhatsApp FON, email FON',
+  openGraph: {
+    title: 'Hubungi Kami - Forum OSIS Nasional',
+    description: 'Terhubung dengan Forum OSIS Nasional melalui berbagai platform dan saluran komunikasi.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function ContactPage() {
   const contactLinks = [
@@ -60,20 +72,10 @@ export default function ContactPage() {
       color: 'bg-brand-blue',
       textColor: 'text-white'
     }
-    // {
-    //   title: 'Discord Server',
-    //   description: 'Komunitas OSIS Indonesia',
-    //   icon: Users,
-    //   href: 'https://discord.gg/forumosis',
-    //   color: 'bg-indigo-600',
-    //   textColor: 'text-white'
-    // }
   ];
 
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -172,8 +174,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

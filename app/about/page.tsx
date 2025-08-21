@@ -1,6 +1,19 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
-import { Target, Award, Megaphone, Hand, LandPlot } from 'lucide-react';
+import type { Metadata } from 'next';
+import { Award, Megaphone, Hand, LandPlot, BrainCog } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Tentang Kami - Forum OSIS Nasional',
+  description:
+    '12 Tahun Pengabdian, FON selalu konsisten menjadi wadah aspirasi dan melahirkan gagasan serta program nyata bagi pelajar Indonesia. Pelajari visi, misi, dan sejarah kami.',
+  keywords: 'tentang FON, visi misi FON, sejarah Forum OSIS Nasional, organisasi pelajar Indonesia',
+  openGraph: {
+    title: 'Tentang Kami - Forum OSIS Nasional',
+    description:
+      '12 Tahun Pengabdian, FON selalu konsisten menjadi wadah aspirasi dan melahirkan gagasan serta program nyata bagi pelajar Indonesia.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
 
 export default function AboutPage() {
   const milestones = [
@@ -9,13 +22,11 @@ export default function AboutPage() {
     { year: '2015', event: 'Digitalisasi Forum OSIS Nusantara (FON)' },
     { year: '2021', event: 'Rebranding Forum OSIS Nasional' },
     { year: '2022', event: 'Peluncuran program Beasiswa FON' },
-    { year: '2024', event: 'Peluncuran program offline FON perdana RISE 2025' }
+    { year: '2024', event: 'Peluncuran program offline FON perdana RISE 2025' }
   ];
 
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-10 w-40 h-40 bg-light-blue/30 organic-shape animate-pulse"></div>
@@ -40,7 +51,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
               <div className="w-16 h-16 bg-light-blue rounded-full flex items-center justify-center mb-6">
-                <Target className="text-brand-blue" size={32} />
+                <BrainCog className="text-brand-blue" size={32} />
               </div>
               <h2 className="font-expanded font-bold text-3xl mb-6 text-brand-blue">Visi</h2>
               <p className="text-brand-blue/80 text-lg leading-relaxed">
@@ -135,8 +146,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

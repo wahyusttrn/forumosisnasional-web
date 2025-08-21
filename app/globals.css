@@ -20,4 +20,16 @@
   .organic-shape-3 {
     border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
   }
+
+  /* Enhanced scroll animation styles for smoother bottom-to-top fade */
+  .animate-in {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) scale(1) !important;
+    transition: all 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+
+  /* Additional smooth animation utilities */
+  .will-change-transform {
+    will-change: transform, opacity;
+  }
 }

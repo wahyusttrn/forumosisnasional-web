@@ -1,28 +1,25 @@
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
-import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import type { Metadata } from 'next';
+import { Clock } from 'lucide-react';
 import Link from 'next/link';
 import articles from './data.json';
 
+export const metadata: Metadata = {
+  title: 'FON Update - Artikel dan Wawasan',
+  description:
+    'Kumpulan artikel, wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia dari Forum OSIS Nasional.',
+  keywords: 'artikel FON, wawasan OSIS, tips organisasi siswa, inspirasi pelajar Indonesia, FON Update',
+  openGraph: {
+    title: 'FON Update - Artikel dan Wawasan',
+    description:
+      'Kumpulan artikel, wawasan, tips, dan inspirasi untuk pengembangan organisasi siswa di Indonesia dari Forum OSIS Nasional.',
+    images: ['/logo_FON.png'],
+    type: 'website'
+  }
+};
+
 export default function ArticlesPage() {
-  // const featuredArticle = {
-  //   id: 1,
-  //   title: 'Membangun Kepemimpinan Siswa di Era Digital',
-  //   excerpt:
-  //     'Bagaimana Forum OSIS Nasional mengadaptasi program kepemimpinan untuk menghadapi tantangan era digital dan mempersiapkan siswa menjadi pemimpin masa depan.',
-  //   author: 'Tim Editorial Forum OSIS',
-  //   date: '15 Desember 2024',
-  //   readTime: '8 menit',
-  //   image: '/placeholder.svg?height=400&width=800',
-  //   category: 'Kepemimpinan'
-  // };
-
-  // const categories = ['Semua', 'Kepemimpinan', 'Inovasi', 'Kolaborasi', 'Pendidikan', 'Komunikasi', 'Event Management'];
-
   return (
     <main className="min-h-screen pt-16">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -41,74 +38,6 @@ export default function ArticlesPage() {
           </div>
         </div>
       </section>
-
-      {/* Featured Article */}
-      {/* <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="font-expanded font-bold text-2xl text-brand-blue mb-2">Artikel Unggulan</h2>
-          </div>
-
-          <Link href={`/articles/${featuredArticle.id}`}>
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={featuredArticle.image || '/placeholder.svg'}
-                    alt={featuredArticle.title}
-                    className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-brand-blue text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      {featuredArticle.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <h3 className="font-expanded font-bold text-2xl lg:text-3xl mb-4 text-brand-blue group-hover:text-brand-blue/80 transition-colors">
-                    {featuredArticle.title}
-                  </h3>
-                  <p className="text-brand-blue/70 mb-6 leading-relaxed text-lg">{featuredArticle.excerpt}</p>
-                  <div className="flex items-center gap-6 text-sm text-brand-blue/60 mb-6">
-                    <div className="flex items-center gap-2">
-                      <User size={16} />
-                      <span>{featuredArticle.author}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar size={16} />
-                      <span>{featuredArticle.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock size={16} />
-                      <span>{featuredArticle.readTime}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-brand-blue font-semibold group-hover:gap-3 transition-all">
-                    Baca Selengkapnya
-                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section> */}
-
-      {/* Categories Filter */}
-      {/* <section className="py-8 border-b border-brand-blue/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-2 rounded-full border border-brand-blue/20 text-brand-blue hover:bg-brand-blue hover:text-white transition-colors"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Articles Grid */}
       <section className="py-20">
@@ -150,8 +79,6 @@ export default function ArticlesPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }
