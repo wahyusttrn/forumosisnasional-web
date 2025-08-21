@@ -119,12 +119,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
             <div
-              className="prose prose-lg max-w-none text-brand-blue/80 leading-relaxed"
+              className="prose prose-lg max-w-none text-brand-blue/80 leading-relaxed sm:text-lg text-sm"
               dangerouslySetInnerHTML={{ __html: article.content }}
-              style={{
-                fontSize: '1.125rem',
-                lineHeight: '1.75'
-              }}
             />
           </div>
         </div>
