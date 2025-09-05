@@ -102,6 +102,13 @@ export default function HomePage() {
               >
                 Kontak Kami
               </Link>
+              <Link
+                href="https://forms.gle/G7EvuUL5wU3T3WZr6"
+                target="_blank"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all duration-200"
+              >
+                Merchandise
+              </Link>
             </div>
           </ScrollAnimation>
         </div>
